@@ -1,6 +1,6 @@
 # Redis on Xen
 
-# Description
+## Description
 
 Redis on Xen is to run redis servers on several 
 Xen guests and benchmark these server on dom0.
@@ -26,7 +26,7 @@ files into each vm.)
 
 ## History
 
-ver 10-07-2016: create this git repo
+ver.10-07-2016: create this git repo
 
 
 ## TODO
