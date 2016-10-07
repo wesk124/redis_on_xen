@@ -1,5 +1,7 @@
 # Redis on Xen
 
+# Description
+
 Redis on Xen is to run redis servers on several 
 Xen guests and benchmark these server on dom0.
 I am currently using the default parameters for
@@ -29,5 +31,12 @@ ver 10-07-2016: create this git repo
 
 ## TODO
 
-IP configuration.
+1. IP configuration.
+
+2. Average of results.
+
+3. Standard deviation of results.
+
+
+
 

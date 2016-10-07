@@ -5,6 +5,8 @@
 
 PREFIX=vm;
 NUM_OF_VMS=4;
+IP_BASE="10.0.0."
+IP_START=5;
 
 echo "===> Copying redis files to each vm..."
 
@@ -22,11 +24,12 @@ echo "=====Finish servers setup!!!====="
 echo "===> Run redis benchmark on dom0..."
 
 
+
 #  TODO:Figure out the ip configure...
-./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.5 > $PREFIX"0".csv &
-./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.6 > $PREFIX"1".csv &
-./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.7 > $PREFIX"2".csv &
-./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.8 > $PREFIX"3".csv &
+./redis-3.2.3/src/redis-benchmark --csv -h $IP_BASE$IP_START > $PREFIX"0".csv &
+./redis-3.2.3/src/redis-benchmark --csv -h $IP_BASE$((IP_START+1)) > $PREFIX"1".csv &
+./redis-3.2.3/src/redis-benchmark --csv -h $IP_BASE$((IP_START+2)) > $PREFIX"2".csv &
+./redis-3.2.3/src/redis-benchmark --csv -h $IP_BASE$((IP_START+3)) > $PREFIX"3".csv &
 
 wait
 
