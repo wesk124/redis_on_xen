@@ -11,13 +11,7 @@ echo "===> Copying redis files to each vm..."
 ./ssh-control/install-cp/copy.sh $PREFIX 0 $((NUM_OFVMS-1)) redis_benchmark_sshcpy.conf
 
 wait
-echo -n ""
-echo -n ""
-echo -n ""
 echo "Finish copying!!!!"
-echo -n ""
-echo -n ""
-echo -n ""
 echo "===> Start running redis server in each vm"
 ./ssh-control/run_cmds.sh $PREFIX 0 $((NUM_OFVMS-1)) "./redis-3.2.3/src/redis-server --protected-mode no" &
 
@@ -36,9 +30,5 @@ echo "===> Run redis benchmark on dom0..."
 
 wait
 
-echo -n ""
-echo -n ""
-echo -n ""
-echo -n ""
 echo "benchmark finish, please check data files of different vms"
 

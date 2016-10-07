@@ -2,19 +2,20 @@
 
 Redis on Xen is to run redis servers on several 
 Xen guests and benchmark these server on dom0.
+I am currently using the default parameters for
+redis benchmark.
 
 
 ## Installation
 
-The user should prepare Xen, delpoy Xen vm(s), and 
-download redis in dom0 first. After clone this repo
-you will have a redis-3.2.3.
+The user should prepare Xen, delpoy Xen vm(s), start them and 
+download redis in dom0 first. (After clone this repo
+you will have a redis-3.2.3.)
 
 
 ## Usage
 
-Need to copy the binaries to each vm.
-
+"./prepare.sh"
 
 
 
@@ -23,10 +24,7 @@ Need to copy the binaries to each vm.
 ver 10-07-2016: create this git repo
 
 
-## Credits
+## TODO
 
-TODO: Write credits
 
-## License
 
-TODO: Write license
