@@ -29,5 +29,5 @@ ver 10-07-2016: create this git repo
 
 ## TODO
 
-
+IP configuration.
 
