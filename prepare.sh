@@ -1,28 +1,44 @@
-#!bin/bash
+#!/bin/bash
 
 # copy redis files to each vm.
 # in this file, we are going to use 4 vms.
+
+PREFIX=vm;
+NUM_OF_VMS=4;
+
 echo "===> Copying redis files to each vm..."
 
+./ssh-control/install-cp/copy.sh $PREFIX 0 $((NUM_OFVMS-1)) redis_benchmark_sshcpy.conf
+
+wait
+echo -n ""
+echo -n ""
+echo -n ""
+echo "Finish copying!!!!"
+echo -n ""
+echo -n ""
+echo -n ""
+echo "===> Start running redis server in each vm"
+./ssh-control/run_cmds.sh $PREFIX 0 $((NUM_OFVMS-1)) "./redis-3.2.3/src/redis-server --protected-mode no" &
+
+wait 
+
+echo "Finish servers setup."
+
+echo "===> Run redis benchmark on dom0..."
 
 
+#  TODO:Figure out the ip configure...
+./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.5 > $PREFIX+0.csv &
+./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.6 > $PREFIX+1.csv &
+./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.7 > $PREFIX+2.csv &
+./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.8 > $PREFIX+3.csv &
 
-echo "===> Preparing environment for benchmarking..."
-#ssh a bunch of files into vm.
+wait
 
-
-echo "===> Start running servers in vm..."
-
-
-
-
-
-
-#  TODO:Figure out the ip congigure...
-#./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.5 > temp1.dat &
-# ./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.6 > temp2.dat &
-# ./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.7 > temp3.dat &
-# ./redis-3.2.3/src/redis-benchmark --csv -h 10.0.0.8 > temp4.dat &
-# wait
-
+echo -n ""
+echo -n ""
+echo -n ""
+echo -n ""
+echo "benchmark finish, please check data files of different vms"
 
