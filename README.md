@@ -15,7 +15,9 @@ you will have a redis-3.2.3.)
 
 ## Usage
 
-"./prepare.sh"
+```
+./prepare.sh
+```
 
 
 
