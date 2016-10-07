@@ -12,7 +12,8 @@ download redis in dom0 first.
 
 ## Usage
 
-TODO: Write usage instructions
+Need to copy the binaries to each vm
+
 
 
 
