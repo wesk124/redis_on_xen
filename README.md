@@ -1,4 +1,4 @@
-# Project Name
+# Redis on Xen
 
 Redis on Xen is to run redis server on several 
 Xen guests and benchmark these server on dom0.
@@ -12,7 +12,7 @@ download redis in dom0 first.
 
 ## Usage
 
-Need to copy the binaries to each vm
+Need to copy the binaries to each vm.
 
 
 
