@@ -8,16 +8,16 @@ NUM_OF_VMS=4;
 
 echo "===> Copying redis files to each vm..."
 
-./ssh-control/install-cp/copy.sh $PREFIX 0 $((NUM_OFVMS-1)) redis_benchmark_sshcpy.conf
+./ssh-control/install-cp/copy.sh $PREFIX 0 $((NUM_OF_VMS-1)) redis_benchmark_sshcpy.conf
 
 wait
-echo "Finish copying!!!!"
-echo "===> Start running redis server in each vm"
-./ssh-control/run_cmds.sh $PREFIX 0 $((NUM_OFVMS-1)) "./redis-3.2.3/src/redis-server --protected-mode no" &
+echo "=====Finish copying!!!======"
+echo "===> Start running redis server in each vm..."
+./ssh-control/run_cmds.sh $PREFIX 0 $((NUM_OF_VMS-1)) "./redis-3.2.3/src/redis-server --protected-mode no" &
 
 wait 
 
-echo "Finish servers setup."
+echo "=====Finish servers setup!!!====="
 
 echo "===> Run redis benchmark on dom0..."
 
@@ -30,5 +30,5 @@ echo "===> Run redis benchmark on dom0..."
 
 wait
 
-echo "benchmark finish, please check data files of different vms"
+echo "=====Finish benchmark, please check data files of different vms!!!====="
 

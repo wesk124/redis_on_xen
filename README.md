@@ -8,9 +8,10 @@ redis benchmark.
 
 ## Installation
 
-The user should prepare Xen, delpoy Xen vm(s), start them and 
-download redis in dom0 first. (After clone this repo
-you will have a redis-3.2.3.)
+The user should prepare Xen hypervisor, delpoy Xen vm(s), start them and 
+download redis in dom0 before starting experiment. (After clone this repo
+you will have a redis-3.2.3. The script will help you copy these redis 
+files into each vm.)
 
 
 ## Usage
