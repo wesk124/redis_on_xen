@@ -38,6 +38,7 @@ result.csv
 ## History
 
 ver.10-07-2016: create this git repo
+
 ver.10-08-2016: finish calculation of average and standard deviation
 
 
