@@ -26,10 +26,9 @@ echo "===> Run redis benchmark on dom0..."
 
 
 #  TODO:Figure out the ip configure...
-./redis-3.2.3/src/redis-benchmark -t set,get --csv -h $IP_BASE$IP_START > $PREFIX"0".csv &
-./redis-3.2.3/src/redis-benchmark -t set,get --csv -h $IP_BASE$((IP_START+1)) > $PREFIX"1".csv &
-./redis-3.2.3/src/redis-benchmark -t set,get --csv -h $IP_BASE$((IP_START+2)) > $PREFIX"2".csv &
-./redis-3.2.3/src/redis-benchmark -t set,get --csv -h $IP_BASE$((IP_START+3)) > $PREFIX"3".csv &
+for i in `seq 0 3`; do
+./redis-3.2.3/src/redis-benchmark -t set,get --csv -h $IP_BASE$((IP_START+$i)) > $PREFIX"$i".csv &
+done
 
 wait
 
