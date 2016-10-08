@@ -18,24 +18,34 @@ files into each vm.)
 
 ## Usage
 
+After delpoying the vms, the user can execute this to start the experiment.
+
 ```
 ./prepare.sh
 ```
+After benchmarking finish, run this script will calculate the mean and the standard
+deviation of SET and GET.
 
+```
+./calculate.sh
+```
+The final result will store in
 
+```
+result.csv
+```
 
 ## History
 
 ver.10-07-2016: create this git repo
+ver.10-08-2016: finish calculation of average and standard deviation
 
 
 ## TODO
 
-1. IP configuration.
+1. IP configuration for variable number of vm;
 
-2. Average of results.
-
-3. Standard deviation of results.
+2. Can do user defined command of benchmark if necessary. 
 
 
 
