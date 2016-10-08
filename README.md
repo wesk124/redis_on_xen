@@ -35,9 +35,9 @@ The final result will store in
 result.csv
 ```
 
-The first is column is variable name, second is mean, Third is population standard deviation.
+The first is column is variable name, second is mean, third is population standard deviation.
 
-The unit is request per second.
+The unit is number of requests per second.
 
 ## History
 
