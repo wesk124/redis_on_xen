@@ -35,6 +35,10 @@ The final result will store in
 result.csv
 ```
 
+The first is column is variable name, second is mean, Third is population standard deviation.
+
+The unit is request per second.
+
 ## History
 
 ver.10-07-2016: create this git repo
