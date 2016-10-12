@@ -28,3 +28,5 @@ cat set_temp.dat | awk  '{sum += $1; sumsq += ($1 * $1) } END {sqd = sumsq / NR 
 
 
 cat get_temp.dat | awk  '{sum += $1; sumsq += ($1 * $1) } END {sqd = sumsq / NR - (sum / NR)^2; if(sqd < 10^-8) sqd = 0; print "get"  ", "sum / NR ", " sqrt(sqd)}' >> result.csv 
+
+echo "please check the result in result.csv"
