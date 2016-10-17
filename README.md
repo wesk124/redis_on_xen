@@ -18,26 +18,22 @@ files into each vm.)
 
 ## Usage
 
-After delpoying the vms, the user can execute this to start the experiment.
+After delpoying the vms, the user can execute this to copy redis files and 
+start redis server in each vm.
 
 ```
 ./prepare.sh
 ```
-After benchmarking finish, run this script will calculate the mean and the standard
-deviation of SET and GET.
+Start benchmarking
 
+```
+./launch.sh
+```
+todo
 ```
 ./calculate.sh
 ```
-The final result will store in
 
-```
-result.csv
-```
-
-The first is column is variable name, second is mean, third is population standard deviation.
-
-The unit is number of requests per second.
 
 ## History
 
@@ -45,12 +41,13 @@ ver.10-07-2016: create this git repo
 
 ver.10-08-2016: finish calculation of average and standard deviation
 
+ver. 10-17-2016: finish iteration of experiment
+
 
 ## TODO
 
-1. IP configuration for variable number of vm;
+1. finish calculation of mean and standard deviation of each iteration.
 
-2. Can do user defined command of benchmark if necessary. 
 
 
 
