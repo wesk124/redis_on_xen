@@ -29,11 +29,6 @@ Start benchmarking
 ```
 ./launch.sh
 ```
-todo
-```
-./calculate.sh
-```
-
 
 ## History
 
@@ -43,10 +38,11 @@ ver.10-08-2016: finish calculation of average and standard deviation
 
 ver. 10-17-2016: finish iteration of experiment
 
+ver. 10-19-2016: almost done...
+
 
 ## TODO
 
-1. finish calculation of mean and standard deviation of each iteration.
 
 
 
